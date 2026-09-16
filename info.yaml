@@ -1,0 +1,46 @@
+# Tiny Tapeout project information
+project:
+  title: "AXION VCE Prototype"
+  author: "codingmain1234-web"
+  discord: ""
+  description: "Minimal Vector Compute Engine with an 8-bit V-Core ALU and SA-Core INT8 MAC"
+  language: "Verilog"
+  clock_hz: 10000000
+  tiles: "1x1"
+  top_module: "tt_um_codingmain1234_web_axion_vce"
+
+  source_files:
+    - "project.v"
+    - "axion_vce.v"
+    - "axion_vcore_alu.v"
+    - "axion_sa_core.v"
+
+pinout:
+  ui[0]: "DATA_IN[0]"
+  ui[1]: "DATA_IN[1]"
+  ui[2]: "DATA_IN[2]"
+  ui[3]: "DATA_IN[3]"
+  ui[4]: "DATA_IN[4]"
+  ui[5]: "DATA_IN[5]"
+  ui[6]: "DATA_IN[6]"
+  ui[7]: "DATA_IN[7]"
+
+  uo[0]: "DATA_OUT[0]"
+  uo[1]: "DATA_OUT[1]"
+  uo[2]: "DATA_OUT[2]"
+  uo[3]: "DATA_OUT[3]"
+  uo[4]: "DATA_OUT[4]"
+  uo[5]: "DATA_OUT[5]"
+  uo[6]: "DATA_OUT[6]"
+  uo[7]: "DATA_OUT[7]"
+
+  uio[0]: "OP[0]"
+  uio[1]: "OP[1]"
+  uio[2]: "OP[2]"
+  uio[3]: "LOAD_A"
+  uio[4]: "LOAD_B"
+  uio[5]: "EXECUTE"
+  uio[6]: "CLEAR_ACC"
+  uio[7]: "OUT_SEL"
+
+yaml_version: 6

@@ -1,0 +1,33 @@
+{
+  "project": "AXION VCE Prototype",
+  "target": "Tiny Tapeout IHP26b / ihp-sg13g2",
+  "clock_hz": 10000000,
+  "tile": "1x1",
+  "top_module": "tt_um_codingmain1234_web_axion_vce",
+  "files": [
+    ".github/workflows/gds.yaml",
+    ".github/workflows/docs.yaml",
+    ".github/workflows/test.yaml",
+    ".gitignore",
+    "ARCHITECTURE.md",
+    "BUDGET_AND_PATH.md",
+    "HARDWARE_TEST.md",
+    "MANIFEST.json",
+    "README.md",
+    "README_KR.md",
+    "REFERENCE_MODEL.py",
+    "SUBMISSION_CHECKLIST.md",
+    "docs/info.md",
+    "info.yaml",
+    "src/axion_sa_core.v",
+    "src/axion_vce.v",
+    "src/axion_vcore_alu.v",
+    "src/project.v",
+    "test/Makefile",
+    "test/requirements.txt",
+    "test/tb.v",
+    "test/test.py"
+  ],
+  "note": "Final GDSII must be generated and verified by the official Tiny Tapeout hardening flow.",
+  "version": "0.2"
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.vcd
+*.fst
+*.zip
+sim_build/
+results.xml
+results/
+runs/
+.DS_Store
