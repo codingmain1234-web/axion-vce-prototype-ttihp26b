@@ -8,7 +8,10 @@ module axion_vcore_alu (
     input  wire [2:0] op,
     output reg  [7:0] y
 );
+    // Gen0 MUL is defined to return only the low eight product bits.
+    /* verilator lint_off UNUSEDSIGNAL */
     wire [15:0] product_u = a * b;
+    /* verilator lint_on UNUSEDSIGNAL */
 
     always @* begin
         case (op)

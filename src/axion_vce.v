@@ -26,7 +26,11 @@ module axion_vce (
     reg [7:0] result_reg;
 
     wire [7:0] alu_y;
+    // The upper accumulator bits are intentionally retained inside SA-Core for
+    // future wider result modes; Gen0 exposes only the saturated INT8 result.
+    /* verilator lint_off UNUSEDSIGNAL */
     wire signed [23:0] sa_acc;
+    /* verilator lint_on UNUSEDSIGNAL */
     wire [7:0] sa_relu_sat;
     wire [7:0] sa_mac_relu_sat;
 
