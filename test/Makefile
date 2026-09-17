@@ -37,3 +37,13 @@ TOPLEVEL = tb
 COCOTB_TEST_MODULES = test
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
+
+# The ttihp26b gate-level action currently checks for the literal word
+# "failure" in results.xml.  Cocotb 2.x emits failures="0" even when every
+# test passes, so remove only that zero-count attribute after simulation.
+# Real failures still leave failures="N" and <failure> entries for the action
+# to detect.
+.DEFAULT_GOAL := axion_test
+.PHONY: axion_test
+axion_test: sim
+	@python -c "from pathlib import Path; p=Path('results.xml'); s=p.read_text(); p.write_text(s.replace(' failures=\"0\"', ''), newline='')"
