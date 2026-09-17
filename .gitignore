@@ -6,4 +6,5 @@ sim_build/
 results.xml
 results/
 runs/
+.artifacts/
 .DS_Store

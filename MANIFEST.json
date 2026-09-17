@@ -22,6 +22,7 @@
     "src/axion_sa_core.v",
     "src/axion_vce.v",
     "src/axion_vcore_alu.v",
+    "src/config.json",
     "src/project.v",
     "test/Makefile",
     "test/requirements.txt",
