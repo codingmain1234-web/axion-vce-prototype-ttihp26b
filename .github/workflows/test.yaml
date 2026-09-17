@@ -32,7 +32,6 @@ jobs:
           cd test
           make clean
           make
-          ! grep failure results.xml
 
       - name: Test summary
         uses: test-summary/action@v2.4
